@@ -2,6 +2,8 @@
 Author: Abhiram Ravi Bharadwaj
 Source: HackerRank
 Problem: https://www.hackerrank.com/challenges/string-similarity/problem
+References: https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/zalg.pdf
+					: https://www.hackerearth.com/practice/algorithms/string-algorithm/z-algorithm/tutorial/
 """
 
 def main():

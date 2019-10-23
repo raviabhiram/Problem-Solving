@@ -2,6 +2,7 @@
 Author: Abhiram Ravi Bharadwaj
 Source: Leetcode
 Problem: https://leetcode.com/problems/longest-palindromic-substring/
+Reference: https://medium.com/hackernoon/manachers-algorithm-explained-longest-palindromic-substring-22cb27a5e96f
 """
 
 def expand_around_i(s, i, start):
