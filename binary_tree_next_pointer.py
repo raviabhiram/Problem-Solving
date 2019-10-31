@@ -1,7 +1,7 @@
 """
 Author: Abhiram Ravi Bharadwaj
 Source: Leetcode
-Problem: https://leetcode.com/problems/copy-list-with-random-pointer/
+Problem: https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
 """
 class Node:
 	def __init__(self, val, left=None, right=None, next=None):
@@ -14,13 +14,16 @@ class Solution:
 	def connect(self, root: 'Node') -> 'Node':
 		if root is None:
 			return None
-		if root.left:
-			root.left.next = root.right
-			self.connect(root.left)
-		if root.right:
-			if root.next:
-				root.right.next = root.next.left
-			self.connect(root.right)
+		q = [root]
+		while q:
+			iterations = len(q)
+			for i in range(iterations):
+				current = q.pop(0)
+				current.next = None if i == iterations - 1 else q[0]
+				if current.left:
+					q.append(current.left)
+				if current.right:
+					q.append(current.right)
 		return root
 
 def main():
