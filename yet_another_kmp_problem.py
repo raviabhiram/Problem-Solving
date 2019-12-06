@@ -2,6 +2,7 @@
 Author: Abhiram Ravi Bharadwaj
 Source: HackerRank
 Problem Link: https://www.hackerrank.com/challenges/kmp-problem/problem
+Reference: https://ideone.com/jM0e28
 """
 import math
 
