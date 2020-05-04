@@ -5,17 +5,17 @@ Problem: https://codingcompetitions.withgoogle.com/codejam/round/000000000005170
 """
 
 def get_numbers(n):
-	a=''
-	b=''
+	a = ''
+	b = ''
 	for i in range(len(n)):
-		if n[i]=='4':
-			a+='3'
-			b+='1'
+		if n[i] == '4':
+			a += '3'
+			b += '1'
 		else:
-			a+=n[i]
-			if b!='':
-				b+='0'
-	return a,b
+			a += n[i]
+			if b != '':
+				b += '0'
+	return a, b
 
 def main():
 	T = int(input())

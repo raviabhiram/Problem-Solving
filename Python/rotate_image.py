@@ -5,14 +5,11 @@ Problem: https://leetcode.com/problems/rotate-image/
 """
 def rotate_image(matrix):
 	m = len(matrix)
-	n = m - 1
 	for i in range(m // 2 + m % 2):
 		for j in range(m // 2):
-			temp = matrix[i][j]
-			matrix[i][j] = matrix[n - j][i]
-			matrix[n - j][i] = matrix[n - i][n - j]
-			matrix[n - i][n - j] = matrix[j][n - i]
-			matrix[j][n - i] = temp
+			matrix[i][j],matrix[m-1 - j][i] = matrix[m-1 - j][i],matrix[i][j]
+			matrix[m-1 - j][i],matrix[m-1 - i][m-1 - j] = matrix[m-1 - i][m-1 - j],matrix[m-1 - j][i]
+			matrix[m-1 - i][m-1 - j],matrix[j][m-1 - i] = matrix[j][m-1 - i],matrix[m-1 - i][m-1 - j]
 
 def main():
 	matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
